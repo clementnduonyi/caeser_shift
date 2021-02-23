@@ -1,25 +1,21 @@
 class CaeserCipher
     def caeser(str, num)
-
-        encription = ""
-
-=begin
-        puts "Enter words or sentences to encript"
-        str = gets.chomp
-=end
+        encryption = ""
+        #str = gets.chomp
+        
         str.each_char do |letter|
             initial = letter.ord < 91 ? 65 : 97 
             if letter.ord.between?(65, 90 ) || letter.ord.between?(97, 122)
                 shifting = (((letter.ord - initial) + num) % 26) + initial
-                encription += shifting.chr
+                encryption += shifting.chr
             else
-                encription += letter
+                encryption += letter
             end
             
         end
-        encription
+        encryption
     end
-    #puts caeser("", -4)
+    #puts caeser("i'm encrypted", -4)
 
 end
 

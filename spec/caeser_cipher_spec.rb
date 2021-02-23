@@ -14,19 +14,19 @@ describe CaeserCipher do
         end
 
         it "is efficient for encryption of strings of any length with short shifts and special characters" do
-            expect(subject.caeser("i'm encrypted!", 3)).to eql("l'p hqfulswhg!")
+            expect(subject.caeser("i'm encrypted!", 3)).to eql("l'p hqfubswhg!")
         end
 
         it "is efficient for enryption of strings of any length with long shifts and special characters" do
-            expect(subject.caeser("i'm encrypted!", 100)).to eql("e'i ajynelpaz!")
+            expect(subject.caeser("i'm encrypted!", 100)).to eql("e'i ajynulpaz!")
         end
 
         it "is efficient for encryption with long negative shifts" do
-            expect(subject.caeser("i'm encrypted", -95)).to eql("r'v nwlarycnm")
+            expect(subject.caeser("i'm encrypted", -95)).to eql("r'v nwlahycnm")
         end
 
         it "is efficient for encryption with short negaitive shifts" do
-            expect(subject.caeser("i'm encrypted", -4)).to eql("e'i ajynelpaz")
+            expect(subject.caeser("i'm encrypted", -4)).to eql("e'i ajynulpaz")
         end
 
         it "is not efficient for decryption" do
